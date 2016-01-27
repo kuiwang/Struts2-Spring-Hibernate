@@ -6,54 +6,56 @@ package rml.model.po;
 
 public class Tusertrole implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Trole trole;
-	private Tuser tuser;
+    private String cid;
 
-	// Constructors
+    private Trole trole;
 
-	/** default constructor */
-	public Tusertrole() {
-	}
+    private Tuser tuser;
 
-	/** minimal constructor */
-	public Tusertrole(String cid) {
-		this.cid = cid;
-	}
+    // Constructors
 
-	/** full constructor */
-	public Tusertrole(String cid, Trole trole, Tuser tuser) {
-		this.cid = cid;
-		this.trole = trole;
-		this.tuser = tuser;
-	}
+    /** default constructor */
+    public Tusertrole() {
+    }
 
-	// Property accessors
+    /** minimal constructor */
+    public Tusertrole(String cid) {
+        this.cid = cid;
+    }
 
-	public String getCid() {
-		return this.cid;
-	}
+    /** full constructor */
+    public Tusertrole(String cid, Trole trole, Tuser tuser) {
+        this.cid = cid;
+        this.trole = trole;
+        this.tuser = tuser;
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    // Property accessors
 
-	public Trole getTrole() {
-		return this.trole;
-	}
+    public String getCid() {
+        return this.cid;
+    }
 
-	public void setTrole(Trole trole) {
-		this.trole = trole;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public Tuser getTuser() {
-		return this.tuser;
-	}
+    public Trole getTrole() {
+        return this.trole;
+    }
 
-	public void setTuser(Tuser tuser) {
-		this.tuser = tuser;
-	}
+    public void setTrole(Trole trole) {
+        this.trole = trole;
+    }
+
+    public Tuser getTuser() {
+        return this.tuser;
+    }
+
+    public void setTuser(Tuser tuser) {
+        this.tuser = tuser;
+    }
 
 }

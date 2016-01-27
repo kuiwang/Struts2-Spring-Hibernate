@@ -12,92 +12,97 @@ import javax.persistence.Table;
 @Table(name = "TEQUIP", schema = "")
 public class Tequip implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private String cmodel;
-	private String cname;
-	private String cproducer;
-	private String cdesc;
-	private Integer cno;
+    private String cid;
 
-	// Constructors
+    private String cmodel;
 
-	/** default constructor */
-	public Tequip() {
-	}
+    private String cname;
 
-	/** minimal constructor */
-	public Tequip(String cid, String cmodel) {
-		this.cid = cid;
-		this.cmodel = cmodel;
-	}
+    private String cproducer;
 
-	/** full constructor */
-	public Tequip(String cid, String cmodel, String cname, String cproducer,
-			String cdesc, Integer cno) {
-		this.cid = cid;
-		this.cmodel = cmodel;
-		this.cname = cname;
-		this.cproducer = cproducer;
-		this.cdesc = cdesc;
-		this.cno = cno;
-	}
+    private String cdesc;
 
-	// Property accessors
-	@Id
-	@Column(name = "CID", unique = true, nullable = false, length = 36)
-	public String getCid() {
-		return this.cid;
-	}
+    private Integer cno;
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    // Constructors
 
-	@Column(name = "CMODEL", nullable = false, length = 100)
-	public String getCmodel() {
-		return this.cmodel;
-	}
+    /** default constructor */
+    public Tequip() {
+    }
 
-	public void setCmodel(String cmodel) {
-		this.cmodel = cmodel;
-	}
+    /** minimal constructor */
+    public Tequip(String cid, String cmodel) {
+        this.cid = cid;
+        this.cmodel = cmodel;
+    }
 
-	@Column(name = "CNAME", length = 100)
-	public String getCname() {
-		return this.cname;
-	}
+    /** full constructor */
+    public Tequip(String cid, String cmodel, String cname, String cproducer, String cdesc,
+            Integer cno) {
+        this.cid = cid;
+        this.cmodel = cmodel;
+        this.cname = cname;
+        this.cproducer = cproducer;
+        this.cdesc = cdesc;
+        this.cno = cno;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    // Property accessors
+    @Id
+    @Column(name = "CID", unique = true, nullable = false, length = 36)
+    public String getCid() {
+        return this.cid;
+    }
 
-	@Column(name = "CPRODUCER", length = 100)
-	public String getCproducer() {
-		return this.cproducer;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCproducer(String cproducer) {
-		this.cproducer = cproducer;
-	}
+    @Column(name = "CMODEL", nullable = false, length = 100)
+    public String getCmodel() {
+        return this.cmodel;
+    }
 
-	@Column(name = "CDESC", length = 100)
-	public String getCdesc() {
-		return this.cdesc;
-	}
+    public void setCmodel(String cmodel) {
+        this.cmodel = cmodel;
+    }
 
-	public void setCdesc(String cdesc) {
-		this.cdesc = cdesc;
-	}
+    @Column(name = "CNAME", length = 100)
+    public String getCname() {
+        return this.cname;
+    }
 
-	@Column(name = "CNO", precision = 8, scale = 0)
-	public Integer getCno() {
-		return this.cno;
-	}
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
-	public void setCno(Integer cno) {
-		this.cno = cno;
-	}
+    @Column(name = "CPRODUCER", length = 100)
+    public String getCproducer() {
+        return this.cproducer;
+    }
+
+    public void setCproducer(String cproducer) {
+        this.cproducer = cproducer;
+    }
+
+    @Column(name = "CDESC", length = 100)
+    public String getCdesc() {
+        return this.cdesc;
+    }
+
+    public void setCdesc(String cdesc) {
+        this.cdesc = cdesc;
+    }
+
+    @Column(name = "CNO", precision = 8, scale = 0)
+    public Integer getCno() {
+        return this.cno;
+    }
+
+    public void setCno(Integer cno) {
+        this.cno = cno;
+    }
 
 }

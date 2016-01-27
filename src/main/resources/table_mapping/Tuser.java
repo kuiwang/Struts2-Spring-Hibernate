@@ -10,87 +10,92 @@ import java.util.Set;
 
 public class Tuser implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Date ccreatedatetime;
-	private Date cmodifydatetime;
-	private String cname;
-	private String cpwd;
-	private Set tusertroles = new HashSet(0);
+    private String cid;
 
-	// Constructors
+    private Date ccreatedatetime;
 
-	/** default constructor */
-	public Tuser() {
-	}
+    private Date cmodifydatetime;
 
-	/** minimal constructor */
-	public Tuser(String cid, String cname, String cpwd) {
-		this.cid = cid;
-		this.cname = cname;
-		this.cpwd = cpwd;
-	}
+    private String cname;
 
-	/** full constructor */
-	public Tuser(String cid, Date ccreatedatetime, Date cmodifydatetime,
-			String cname, String cpwd, Set tusertroles) {
-		this.cid = cid;
-		this.ccreatedatetime = ccreatedatetime;
-		this.cmodifydatetime = cmodifydatetime;
-		this.cname = cname;
-		this.cpwd = cpwd;
-		this.tusertroles = tusertroles;
-	}
+    private String cpwd;
 
-	// Property accessors
+    private Set tusertroles = new HashSet(0);
 
-	public String getCid() {
-		return this.cid;
-	}
+    // Constructors
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    /** default constructor */
+    public Tuser() {
+    }
 
-	public Date getCcreatedatetime() {
-		return this.ccreatedatetime;
-	}
+    /** minimal constructor */
+    public Tuser(String cid, String cname, String cpwd) {
+        this.cid = cid;
+        this.cname = cname;
+        this.cpwd = cpwd;
+    }
 
-	public void setCcreatedatetime(Date ccreatedatetime) {
-		this.ccreatedatetime = ccreatedatetime;
-	}
+    /** full constructor */
+    public Tuser(String cid, Date ccreatedatetime, Date cmodifydatetime, String cname, String cpwd,
+            Set tusertroles) {
+        this.cid = cid;
+        this.ccreatedatetime = ccreatedatetime;
+        this.cmodifydatetime = cmodifydatetime;
+        this.cname = cname;
+        this.cpwd = cpwd;
+        this.tusertroles = tusertroles;
+    }
 
-	public Date getCmodifydatetime() {
-		return this.cmodifydatetime;
-	}
+    // Property accessors
 
-	public void setCmodifydatetime(Date cmodifydatetime) {
-		this.cmodifydatetime = cmodifydatetime;
-	}
+    public String getCid() {
+        return this.cid;
+    }
 
-	public String getCname() {
-		return this.cname;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public Date getCcreatedatetime() {
+        return this.ccreatedatetime;
+    }
 
-	public String getCpwd() {
-		return this.cpwd;
-	}
+    public void setCcreatedatetime(Date ccreatedatetime) {
+        this.ccreatedatetime = ccreatedatetime;
+    }
 
-	public void setCpwd(String cpwd) {
-		this.cpwd = cpwd;
-	}
+    public Date getCmodifydatetime() {
+        return this.cmodifydatetime;
+    }
 
-	public Set getTusertroles() {
-		return this.tusertroles;
-	}
+    public void setCmodifydatetime(Date cmodifydatetime) {
+        this.cmodifydatetime = cmodifydatetime;
+    }
 
-	public void setTusertroles(Set tusertroles) {
-		this.tusertroles = tusertroles;
-	}
+    public String getCname() {
+        return this.cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    public String getCpwd() {
+        return this.cpwd;
+    }
+
+    public void setCpwd(String cpwd) {
+        this.cpwd = cpwd;
+    }
+
+    public Set getTusertroles() {
+        return this.tusertroles;
+    }
+
+    public void setTusertroles(Set tusertroles) {
+        this.tusertroles = tusertroles;
+    }
 
 }

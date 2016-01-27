@@ -8,77 +8,80 @@ import java.util.Date;
 
 public class Tlog implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Date cdatetime;
-	private String cip;
-	private String cmsg;
-	private String cname;
+    private String cid;
 
-	// Constructors
+    private Date cdatetime;
 
-	/** default constructor */
-	public Tlog() {
-	}
+    private String cip;
 
-	/** minimal constructor */
-	public Tlog(String cid, String cip, String cname) {
-		this.cid = cid;
-		this.cip = cip;
-		this.cname = cname;
-	}
+    private String cmsg;
 
-	/** full constructor */
-	public Tlog(String cid, Date cdatetime, String cip, String cmsg,
-			String cname) {
-		this.cid = cid;
-		this.cdatetime = cdatetime;
-		this.cip = cip;
-		this.cmsg = cmsg;
-		this.cname = cname;
-	}
+    private String cname;
 
-	// Property accessors
+    // Constructors
 
-	public String getCid() {
-		return this.cid;
-	}
+    /** default constructor */
+    public Tlog() {
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    /** minimal constructor */
+    public Tlog(String cid, String cip, String cname) {
+        this.cid = cid;
+        this.cip = cip;
+        this.cname = cname;
+    }
 
-	public Date getCdatetime() {
-		return this.cdatetime;
-	}
+    /** full constructor */
+    public Tlog(String cid, Date cdatetime, String cip, String cmsg, String cname) {
+        this.cid = cid;
+        this.cdatetime = cdatetime;
+        this.cip = cip;
+        this.cmsg = cmsg;
+        this.cname = cname;
+    }
 
-	public void setCdatetime(Date cdatetime) {
-		this.cdatetime = cdatetime;
-	}
+    // Property accessors
 
-	public String getCip() {
-		return this.cip;
-	}
+    public String getCid() {
+        return this.cid;
+    }
 
-	public void setCip(String cip) {
-		this.cip = cip;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public String getCmsg() {
-		return this.cmsg;
-	}
+    public Date getCdatetime() {
+        return this.cdatetime;
+    }
 
-	public void setCmsg(String cmsg) {
-		this.cmsg = cmsg;
-	}
+    public void setCdatetime(Date cdatetime) {
+        this.cdatetime = cdatetime;
+    }
 
-	public String getCname() {
-		return this.cname;
-	}
+    public String getCip() {
+        return this.cip;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public void setCip(String cip) {
+        this.cip = cip;
+    }
+
+    public String getCmsg() {
+        return this.cmsg;
+    }
+
+    public void setCmsg(String cmsg) {
+        this.cmsg = cmsg;
+    }
+
+    public String getCname() {
+        return this.cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
 }

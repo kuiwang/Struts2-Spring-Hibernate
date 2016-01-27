@@ -2,6 +2,7 @@ package rml.model.po;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,80 +18,85 @@ import javax.persistence.Table;
 @Table(name = "TROLE", schema = "")
 public class Trole implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private String cdesc;
-	private String cname;
-	private Set<Troletauth> troletauths = new HashSet<Troletauth>(0);
-	private Set<Tusertrole> tusertroles = new HashSet<Tusertrole>(0);
+    private String cid;
 
-	// Constructors
+    private String cdesc;
 
-	/** default constructor */
-	public Trole() {
-	}
+    private String cname;
 
-	/** minimal constructor */
-	public Trole(String cid, String cname) {
-		this.cid = cid;
-		this.cname = cname;
-	}
+    private Set<Troletauth> troletauths = new HashSet<Troletauth>(0);
 
-	/** full constructor */
-	public Trole(String cid, String cdesc, String cname, Set<Troletauth> troletauths, Set<Tusertrole> tusertroles) {
-		this.cid = cid;
-		this.cdesc = cdesc;
-		this.cname = cname;
-		this.troletauths = troletauths;
-		this.tusertroles = tusertroles;
-	}
+    private Set<Tusertrole> tusertroles = new HashSet<Tusertrole>(0);
 
-	// Property accessors
-	@Id
-	@Column(name = "CID", nullable = false, length = 36)
-	public String getCid() {
-		return this.cid;
-	}
+    // Constructors
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    /** default constructor */
+    public Trole() {
+    }
 
-	@Column(name = "CDESC", length = 200)
-	public String getCdesc() {
-		return this.cdesc;
-	}
+    /** minimal constructor */
+    public Trole(String cid, String cname) {
+        this.cid = cid;
+        this.cname = cname;
+    }
 
-	public void setCdesc(String cdesc) {
-		this.cdesc = cdesc;
-	}
+    /** full constructor */
+    public Trole(String cid, String cdesc, String cname, Set<Troletauth> troletauths,
+            Set<Tusertrole> tusertroles) {
+        this.cid = cid;
+        this.cdesc = cdesc;
+        this.cname = cname;
+        this.troletauths = troletauths;
+        this.tusertroles = tusertroles;
+    }
 
-	@Column(name = "CNAME", nullable = false, length = 100)
-	public String getCname() {
-		return this.cname;
-	}
+    // Property accessors
+    @Id
+    @Column(name = "CID", nullable = false, length = 36)
+    public String getCid() {
+        return this.cid;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "trole")
-	public Set<Troletauth> getTroletauths() {
-		return this.troletauths;
-	}
+    @Column(name = "CDESC", length = 200)
+    public String getCdesc() {
+        return this.cdesc;
+    }
 
-	public void setTroletauths(Set<Troletauth> troletauths) {
-		this.troletauths = troletauths;
-	}
+    public void setCdesc(String cdesc) {
+        this.cdesc = cdesc;
+    }
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "trole")
-	public Set<Tusertrole> getTusertroles() {
-		return this.tusertroles;
-	}
+    @Column(name = "CNAME", nullable = false, length = 100)
+    public String getCname() {
+        return this.cname;
+    }
 
-	public void setTusertroles(Set<Tusertrole> tusertroles) {
-		this.tusertroles = tusertroles;
-	}
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "trole")
+    public Set<Troletauth> getTroletauths() {
+        return this.troletauths;
+    }
+
+    public void setTroletauths(Set<Troletauth> troletauths) {
+        this.troletauths = troletauths;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "trole")
+    public Set<Tusertrole> getTusertroles() {
+        return this.tusertroles;
+    }
+
+    public void setTusertroles(Set<Tusertrole> tusertroles) {
+        this.tusertroles = tusertroles;
+    }
 
 }

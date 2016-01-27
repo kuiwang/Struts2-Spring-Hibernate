@@ -6,54 +6,56 @@ package rml.model.po;
 
 public class Troletauth implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Tauth tauth;
-	private Trole trole;
+    private String cid;
 
-	// Constructors
+    private Tauth tauth;
 
-	/** default constructor */
-	public Troletauth() {
-	}
+    private Trole trole;
 
-	/** minimal constructor */
-	public Troletauth(String cid) {
-		this.cid = cid;
-	}
+    // Constructors
 
-	/** full constructor */
-	public Troletauth(String cid, Tauth tauth, Trole trole) {
-		this.cid = cid;
-		this.tauth = tauth;
-		this.trole = trole;
-	}
+    /** default constructor */
+    public Troletauth() {
+    }
 
-	// Property accessors
+    /** minimal constructor */
+    public Troletauth(String cid) {
+        this.cid = cid;
+    }
 
-	public String getCid() {
-		return this.cid;
-	}
+    /** full constructor */
+    public Troletauth(String cid, Tauth tauth, Trole trole) {
+        this.cid = cid;
+        this.tauth = tauth;
+        this.trole = trole;
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    // Property accessors
 
-	public Tauth getTauth() {
-		return this.tauth;
-	}
+    public String getCid() {
+        return this.cid;
+    }
 
-	public void setTauth(Tauth tauth) {
-		this.tauth = tauth;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public Trole getTrole() {
-		return this.trole;
-	}
+    public Tauth getTauth() {
+        return this.tauth;
+    }
 
-	public void setTrole(Trole trole) {
-		this.trole = trole;
-	}
+    public void setTauth(Tauth tauth) {
+        this.tauth = tauth;
+    }
+
+    public Trole getTrole() {
+        return this.trole;
+    }
+
+    public void setTrole(Trole trole) {
+        this.trole = trole;
+    }
 
 }

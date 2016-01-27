@@ -8,59 +8,62 @@ import java.util.Date;
 
 public class Tonline implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Date cdatetime;
-	private String cip;
-	private String cname;
+    private String cid;
 
-	// Constructors
+    private Date cdatetime;
 
-	/** default constructor */
-	public Tonline() {
-	}
+    private String cip;
 
-	/** full constructor */
-	public Tonline(String cid, Date cdatetime, String cip, String cname) {
-		this.cid = cid;
-		this.cdatetime = cdatetime;
-		this.cip = cip;
-		this.cname = cname;
-	}
+    private String cname;
 
-	// Property accessors
+    // Constructors
 
-	public String getCid() {
-		return this.cid;
-	}
+    /** default constructor */
+    public Tonline() {
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    /** full constructor */
+    public Tonline(String cid, Date cdatetime, String cip, String cname) {
+        this.cid = cid;
+        this.cdatetime = cdatetime;
+        this.cip = cip;
+        this.cname = cname;
+    }
 
-	public Date getCdatetime() {
-		return this.cdatetime;
-	}
+    // Property accessors
 
-	public void setCdatetime(Date cdatetime) {
-		this.cdatetime = cdatetime;
-	}
+    public String getCid() {
+        return this.cid;
+    }
 
-	public String getCip() {
-		return this.cip;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCip(String cip) {
-		this.cip = cip;
-	}
+    public Date getCdatetime() {
+        return this.cdatetime;
+    }
 
-	public String getCname() {
-		return this.cname;
-	}
+    public void setCdatetime(Date cdatetime) {
+        this.cdatetime = cdatetime;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public String getCip() {
+        return this.cip;
+    }
+
+    public void setCip(String cip) {
+        this.cip = cip;
+    }
+
+    public String getCname() {
+        return this.cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
 }

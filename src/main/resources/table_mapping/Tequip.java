@@ -6,86 +6,90 @@ package rml.model.po;
 
 public class Tequip implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private String cdesc;
-	private String cmodel;
-	private String cname;
-	private Long cno;
-	private String cproducer;
+    private String cid;
 
-	// Constructors
+    private String cdesc;
 
-	/** default constructor */
-	public Tequip() {
-	}
+    private String cmodel;
 
-	/** minimal constructor */
-	public Tequip(String cid, String cmodel) {
-		this.cid = cid;
-		this.cmodel = cmodel;
-	}
+    private String cname;
 
-	/** full constructor */
-	public Tequip(String cid, String cdesc, String cmodel, String cname,
-			Long cno, String cproducer) {
-		this.cid = cid;
-		this.cdesc = cdesc;
-		this.cmodel = cmodel;
-		this.cname = cname;
-		this.cno = cno;
-		this.cproducer = cproducer;
-	}
+    private Long cno;
 
-	// Property accessors
+    private String cproducer;
 
-	public String getCid() {
-		return this.cid;
-	}
+    // Constructors
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    /** default constructor */
+    public Tequip() {
+    }
 
-	public String getCdesc() {
-		return this.cdesc;
-	}
+    /** minimal constructor */
+    public Tequip(String cid, String cmodel) {
+        this.cid = cid;
+        this.cmodel = cmodel;
+    }
 
-	public void setCdesc(String cdesc) {
-		this.cdesc = cdesc;
-	}
+    /** full constructor */
+    public Tequip(String cid, String cdesc, String cmodel, String cname, Long cno, String cproducer) {
+        this.cid = cid;
+        this.cdesc = cdesc;
+        this.cmodel = cmodel;
+        this.cname = cname;
+        this.cno = cno;
+        this.cproducer = cproducer;
+    }
 
-	public String getCmodel() {
-		return this.cmodel;
-	}
+    // Property accessors
 
-	public void setCmodel(String cmodel) {
-		this.cmodel = cmodel;
-	}
+    public String getCid() {
+        return this.cid;
+    }
 
-	public String getCname() {
-		return this.cname;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public String getCdesc() {
+        return this.cdesc;
+    }
 
-	public Long getCno() {
-		return this.cno;
-	}
+    public void setCdesc(String cdesc) {
+        this.cdesc = cdesc;
+    }
 
-	public void setCno(Long cno) {
-		this.cno = cno;
-	}
+    public String getCmodel() {
+        return this.cmodel;
+    }
 
-	public String getCproducer() {
-		return this.cproducer;
-	}
+    public void setCmodel(String cmodel) {
+        this.cmodel = cmodel;
+    }
 
-	public void setCproducer(String cproducer) {
-		this.cproducer = cproducer;
-	}
+    public String getCname() {
+        return this.cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    public Long getCno() {
+        return this.cno;
+    }
+
+    public void setCno(Long cno) {
+        this.cno = cno;
+    }
+
+    public String getCproducer() {
+        return this.cproducer;
+    }
+
+    public void setCproducer(String cproducer) {
+        this.cproducer = cproducer;
+    }
 
 }

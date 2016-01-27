@@ -4,79 +4,85 @@ import java.util.Date;
 
 public class Online implements java.io.Serializable {
 
-	//pagination
-	private int page;// current page
-	private int rows;// number of records in each page
-	private String sort;// sort field
-	private String order;// sort order (asc,desc)
+    //pagination
+    private int page;// current page
 
-	private String cid;
-	private Date cdatetime;
-	private String cip;
-	private String cname;
-	
-	public int getPage() {
-		return page;
-	}
+    private int rows;// number of records in each page
 
-	public void setPage(int page) {
-		this.page = page;
-	}
+    private String sort;// sort field
 
-	public int getRows() {
-		return rows;
-	}
+    private String order;// sort order (asc,desc)
 
-	public void setRows(int rows) {
-		this.rows = rows;
-	}
+    private String cid;
 
-	public String getSort() {
-		return sort;
-	}
+    private Date cdatetime;
 
-	public void setSort(String sort) {
-		this.sort = sort;
-	}
+    private String cip;
 
-	public String getOrder() {
-		return order;
-	}
+    private String cname;
 
-	public void setOrder(String order) {
-		this.order = order;
-	}
+    public int getPage() {
+        return page;
+    }
 
-	public String getCid() {
-		return cid;
-	}
+    public void setPage(int page) {
+        this.page = page;
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    public int getRows() {
+        return rows;
+    }
 
-	public Date getCdatetime() {
-		return cdatetime;
-	}
+    public void setRows(int rows) {
+        this.rows = rows;
+    }
 
-	public void setCdatetime(Date cdatetime) {
-		this.cdatetime = cdatetime;
-	}
+    public String getSort() {
+        return sort;
+    }
 
-	public String getCip() {
-		return cip;
-	}
+    public void setSort(String sort) {
+        this.sort = sort;
+    }
 
-	public void setCip(String cip) {
-		this.cip = cip;
-	}
+    public String getOrder() {
+        return order;
+    }
 
-	public String getCname() {
-		return cname;
-	}
+    public void setOrder(String order) {
+        this.order = order;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public String getCid() {
+        return cid;
+    }
+
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
+
+    public Date getCdatetime() {
+        return cdatetime;
+    }
+
+    public void setCdatetime(Date cdatetime) {
+        this.cdatetime = cdatetime;
+    }
+
+    public String getCip() {
+        return cip;
+    }
+
+    public void setCip(String cip) {
+        this.cip = cip;
+    }
+
+    public String getCname() {
+        return cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
 }

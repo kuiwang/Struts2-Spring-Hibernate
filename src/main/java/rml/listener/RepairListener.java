@@ -26,74 +26,76 @@ import rml.service.RepairServiceI;
  * repaire databse when system start up
  * 
  */
-public class RepairListener implements ServletContextListener, ServletContextAttributeListener, HttpSessionListener, HttpSessionAttributeListener, HttpSessionActivationListener, HttpSessionBindingListener, ServletRequestListener, ServletRequestAttributeListener {
-	
-	private static final Logger logger = Logger.getLogger(RepairListener.class);
+public class RepairListener implements ServletContextListener, ServletContextAttributeListener,
+        HttpSessionListener, HttpSessionAttributeListener, HttpSessionActivationListener,
+        HttpSessionBindingListener, ServletRequestListener, ServletRequestAttributeListener {
 
-	private static ApplicationContext ctx = null;
- 
-	public RepairListener() {
-	}
+    private static final Logger logger = Logger.getLogger(RepairListener.class);
 
-	public void requestDestroyed(ServletRequestEvent arg0) {
-	}
+    private static ApplicationContext ctx = null;
 
-	public void attributeAdded(HttpSessionBindingEvent evt) {
-	}
+    public RepairListener() {
+    }
 
-	public void contextInitialized(ServletContextEvent evt) {
-		logger.info("repair database");
-		ctx = WebApplicationContextUtils.getWebApplicationContext(evt.getServletContext());
-		RepairServiceI repairService = (RepairServiceI) ctx.getBean("repairService");
-		repairService.repair();
-	}
+    public void requestDestroyed(ServletRequestEvent arg0) {
+    }
 
-	public void sessionDidActivate(HttpSessionEvent arg0) {
-	}
+    public void attributeAdded(HttpSessionBindingEvent evt) {
+    }
 
-	public void valueBound(HttpSessionBindingEvent arg0) {
-	}
+    public void contextInitialized(ServletContextEvent evt) {
+        logger.info("repair database");
+        ctx = WebApplicationContextUtils.getWebApplicationContext(evt.getServletContext());
+        RepairServiceI repairService = (RepairServiceI) ctx.getBean("repairService");
+        repairService.repair();
+    }
 
-	public void attributeAdded(ServletContextAttributeEvent arg0) {
-	}
+    public void sessionDidActivate(HttpSessionEvent arg0) {
+    }
 
-	public void attributeRemoved(ServletContextAttributeEvent arg0) {
-	}
+    public void valueBound(HttpSessionBindingEvent arg0) {
+    }
 
-	public void sessionDestroyed(HttpSessionEvent evt) {
-	}
+    public void attributeAdded(ServletContextAttributeEvent arg0) {
+    }
 
-	public void attributeRemoved(HttpSessionBindingEvent arg0) {
-	}
+    public void attributeRemoved(ServletContextAttributeEvent arg0) {
+    }
 
-	public void attributeAdded(ServletRequestAttributeEvent evt) {
-	}
+    public void sessionDestroyed(HttpSessionEvent evt) {
+    }
 
-	public void valueUnbound(HttpSessionBindingEvent arg0) {
-	}
+    public void attributeRemoved(HttpSessionBindingEvent arg0) {
+    }
 
-	public void sessionWillPassivate(HttpSessionEvent arg0) {
-	}
+    public void attributeAdded(ServletRequestAttributeEvent evt) {
+    }
 
-	public void sessionCreated(HttpSessionEvent arg0) {
-	}
+    public void valueUnbound(HttpSessionBindingEvent arg0) {
+    }
 
-	public void attributeReplaced(HttpSessionBindingEvent arg0) {
-	}
+    public void sessionWillPassivate(HttpSessionEvent arg0) {
+    }
 
-	public void attributeReplaced(ServletContextAttributeEvent arg0) {
-	}
+    public void sessionCreated(HttpSessionEvent arg0) {
+    }
 
-	public void attributeRemoved(ServletRequestAttributeEvent arg0) {
-	}
+    public void attributeReplaced(HttpSessionBindingEvent arg0) {
+    }
 
-	public void contextDestroyed(ServletContextEvent evt) {
-	}
+    public void attributeReplaced(ServletContextAttributeEvent arg0) {
+    }
 
-	public void attributeReplaced(ServletRequestAttributeEvent arg0) {
-	}
+    public void attributeRemoved(ServletRequestAttributeEvent arg0) {
+    }
 
-	public void requestInitialized(ServletRequestEvent arg0) {
-	}
+    public void contextDestroyed(ServletContextEvent evt) {
+    }
+
+    public void attributeReplaced(ServletRequestAttributeEvent arg0) {
+    }
+
+    public void requestInitialized(ServletRequestEvent arg0) {
+    }
 
 }

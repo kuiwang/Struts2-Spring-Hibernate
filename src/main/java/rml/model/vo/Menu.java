@@ -6,105 +6,114 @@ import rml.model.po.Tmenu;
 
 public class Menu implements java.io.Serializable {
 
-	private String id;
-	private String pid;
-	private String pname;
-	private String state = "open";// open closed
-	private String iconCls;// icon
+    private String id;
 
-	private String cid;
-	private Tmenu tmenu;
-	private String ciconcls;
-	private String cname;
-	private BigDecimal cseq;
-	private String curl;
-	
-	public String getIconCls() {
-		return iconCls;
-	}
+    private String pid;
 
-	public void setIconCls(String iconCls) {
-		this.iconCls = iconCls;
-	}
+    private String pname;
 
-	public String getState() {
-		return state;
-	}
+    private String state = "open";// open closed
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    private String iconCls;// icon
 
-	public String getPid() {
-		return pid;
-	}
+    private String cid;
 
-	public void setPid(String pid) {
-		this.pid = pid;
-	}
+    private Tmenu tmenu;
 
-	public String getPname() {
-		return pname;
-	}
+    private String ciconcls;
 
-	public void setPname(String pname) {
-		this.pname = pname;
-	}
+    private String cname;
 
-	public String getId() {
-		return id;
-	}
+    private BigDecimal cseq;
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    private String curl;
 
-	public String getCid() {
-		return cid;
-	}
+    public String getIconCls() {
+        return iconCls;
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    public void setIconCls(String iconCls) {
+        this.iconCls = iconCls;
+    }
 
-	public Tmenu getTmenu() {
-		return tmenu;
-	}
+    public String getState() {
+        return state;
+    }
 
-	public void setTmenu(Tmenu tmenu) {
-		this.tmenu = tmenu;
-	}
+    public void setState(String state) {
+        this.state = state;
+    }
 
-	public String getCiconcls() {
-		return ciconcls;
-	}
+    public String getPid() {
+        return pid;
+    }
 
-	public void setCiconcls(String ciconcls) {
-		this.ciconcls = ciconcls;
-	}
+    public void setPid(String pid) {
+        this.pid = pid;
+    }
 
-	public String getCname() {
-		return cname;
-	}
+    public String getPname() {
+        return pname;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public void setPname(String pname) {
+        this.pname = pname;
+    }
 
-	public BigDecimal getCseq() {
-		return cseq;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setCseq(BigDecimal cseq) {
-		this.cseq = cseq;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getCurl() {
-		return curl;
-	}
+    public String getCid() {
+        return cid;
+    }
 
-	public void setCurl(String curl) {
-		this.curl = curl;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
+
+    public Tmenu getTmenu() {
+        return tmenu;
+    }
+
+    public void setTmenu(Tmenu tmenu) {
+        this.tmenu = tmenu;
+    }
+
+    public String getCiconcls() {
+        return ciconcls;
+    }
+
+    public void setCiconcls(String ciconcls) {
+        this.ciconcls = ciconcls;
+    }
+
+    public String getCname() {
+        return cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    public BigDecimal getCseq() {
+        return cseq;
+    }
+
+    public void setCseq(BigDecimal cseq) {
+        this.cseq = cseq;
+    }
+
+    public String getCurl() {
+        return curl;
+    }
+
+    public void setCurl(String curl) {
+        this.curl = curl;
+    }
 
 }

@@ -14,108 +14,105 @@ import rml.util.ExceptionUtil;
 import com.opensymphony.xwork2.ModelDriven;
 
 @Namespace("/")
-@Action(value = "roleAction", 
-		results = { 
-			@Result(name = "role", location = "/admin/role.jsp"), 
-			@Result(name = "roleAdd", location = "/admin/roleAdd.jsp"), 
-			@Result(name = "roleEdit", location = "/admin/roleEdit.jsp") 
-		})
+@Action(value = "roleAction", results = { @Result(name = "role", location = "/admin/role.jsp"),
+        @Result(name = "roleAdd", location = "/admin/roleAdd.jsp"),
+        @Result(name = "roleEdit", location = "/admin/roleEdit.jsp") })
 public class RoleAction extends BaseAction implements ModelDriven<Role> {
 
-	private static final Logger logger = Logger.getLogger(RoleAction.class);
+    private static final Logger logger = Logger.getLogger(RoleAction.class);
 
-	private Role role = new Role();
-	
-	public Role getModel() {
-		return role;
-	}
-	
-	private RoleServiceI roleService;
+    private Role role = new Role();
 
-	public RoleServiceI getRoleService() {
-		return roleService;
-	}
+    public Role getModel() {
+        return role;
+    }
 
-	@Autowired
-	public void setRoleService(RoleServiceI roleService) {
-		this.roleService = roleService;
-	}
+    private RoleServiceI roleService;
 
-	/**
-	 * goto role management page
-	 */
-	public String role() {
-		return "role";
-	}
+    public RoleServiceI getRoleService() {
+        return roleService;
+    }
 
-	public String roleAdd() {
-		return "roleAdd";
-	}
+    @Autowired
+    public void setRoleService(RoleServiceI roleService) {
+        this.roleService = roleService;
+    }
 
-	public String roleEdit() {
-		return "roleEdit";
-	}
+    /**
+     * goto role management page
+     */
+    public String role() {
+        return "role";
+    }
 
-	/**
-	 * add role
-	 */
-	public void add() {
-		Json j = new Json();
-		try {
-			roleService.add(role);
-			j.setSuccess(true);
-			j.setMsg("Add successfully");
-		} catch (Exception e) {
-			logger.error(ExceptionUtil.getExceptionMessage(e));
-			j.setMsg("Add unsuccessfully");
-		}
-		super.writeJson(j);
-	}
+    public String roleAdd() {
+        return "roleAdd";
+    }
 
-	/**
-	 * edit role
-	 */
-	public void edit() {
-		Json j = new Json();
-		try {
-			roleService.edit(role);
-			j.setSuccess(true);
-			j.setMsg("Edit successfully");
-		} catch (Exception e) {
-			logger.error(ExceptionUtil.getExceptionMessage(e));
-			j.setMsg("Edit unsuccessfully");
-		}
-		super.writeJson(j);
-	}
+    public String roleEdit() {
+        return "roleEdit";
+    }
 
-	/**
-	 * delete roles
-	 */
-	public void delete() {
-		Json j = new Json();
-		try {
-			roleService.delete(role.getIds());
-			j.setSuccess(true);
-			j.setMsg("Delete successfully");
-		} catch (Exception e) {
-			logger.error(ExceptionUtil.getExceptionMessage(e));
-			j.setMsg("Delete unsuccessfully");
-		}
-		super.writeJson(j);
-	}
+    /**
+     * add role
+     */
+    public void add() {
+        Json j = new Json();
+        try {
+            roleService.add(role);
+            j.setSuccess(true);
+            j.setMsg("Add successfully");
+        } catch (Exception e) {
+            logger.error(ExceptionUtil.getExceptionMessage(e));
+            j.setMsg("Add unsuccessfully");
+        }
+        super.writeJson(j);
+    }
 
-	/**
-	 * get datagrid of role
-	 */
-	public void datagrid() {
-		super.writeJson(roleService.datagrid(role));
-	}
-	
-	/**
-	 * get combobox of role
-	 */
-	public void doNotNeedSession_combobox() {
-		super.writeJson(roleService.combobox());
-	}
+    /**
+     * edit role
+     */
+    public void edit() {
+        Json j = new Json();
+        try {
+            roleService.edit(role);
+            j.setSuccess(true);
+            j.setMsg("Edit successfully");
+        } catch (Exception e) {
+            logger.error(ExceptionUtil.getExceptionMessage(e));
+            j.setMsg("Edit unsuccessfully");
+        }
+        super.writeJson(j);
+    }
+
+    /**
+     * delete roles
+     */
+    public void delete() {
+        Json j = new Json();
+        try {
+            roleService.delete(role.getIds());
+            j.setSuccess(true);
+            j.setMsg("Delete successfully");
+        } catch (Exception e) {
+            logger.error(ExceptionUtil.getExceptionMessage(e));
+            j.setMsg("Delete unsuccessfully");
+        }
+        super.writeJson(j);
+    }
+
+    /**
+     * get datagrid of role
+     */
+    public void datagrid() {
+        super.writeJson(roleService.datagrid(role));
+    }
+
+    /**
+     * get combobox of role
+     */
+    public void doNotNeedSession_combobox() {
+        super.writeJson(roleService.combobox());
+    }
 
 }

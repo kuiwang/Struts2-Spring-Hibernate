@@ -9,76 +9,79 @@ import java.util.Set;
 
 public class Trole implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private String cdesc;
-	private String cname;
-	private Set troletauths = new HashSet(0);
-	private Set tusertroles = new HashSet(0);
+    private String cid;
 
-	// Constructors
+    private String cdesc;
 
-	/** default constructor */
-	public Trole() {
-	}
+    private String cname;
 
-	/** minimal constructor */
-	public Trole(String cid, String cname) {
-		this.cid = cid;
-		this.cname = cname;
-	}
+    private Set troletauths = new HashSet(0);
 
-	/** full constructor */
-	public Trole(String cid, String cdesc, String cname, Set troletauths,
-			Set tusertroles) {
-		this.cid = cid;
-		this.cdesc = cdesc;
-		this.cname = cname;
-		this.troletauths = troletauths;
-		this.tusertroles = tusertroles;
-	}
+    private Set tusertroles = new HashSet(0);
 
-	// Property accessors
+    // Constructors
 
-	public String getCid() {
-		return this.cid;
-	}
+    /** default constructor */
+    public Trole() {
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    /** minimal constructor */
+    public Trole(String cid, String cname) {
+        this.cid = cid;
+        this.cname = cname;
+    }
 
-	public String getCdesc() {
-		return this.cdesc;
-	}
+    /** full constructor */
+    public Trole(String cid, String cdesc, String cname, Set troletauths, Set tusertroles) {
+        this.cid = cid;
+        this.cdesc = cdesc;
+        this.cname = cname;
+        this.troletauths = troletauths;
+        this.tusertroles = tusertroles;
+    }
 
-	public void setCdesc(String cdesc) {
-		this.cdesc = cdesc;
-	}
+    // Property accessors
 
-	public String getCname() {
-		return this.cname;
-	}
+    public String getCid() {
+        return this.cid;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public Set getTroletauths() {
-		return this.troletauths;
-	}
+    public String getCdesc() {
+        return this.cdesc;
+    }
 
-	public void setTroletauths(Set troletauths) {
-		this.troletauths = troletauths;
-	}
+    public void setCdesc(String cdesc) {
+        this.cdesc = cdesc;
+    }
 
-	public Set getTusertroles() {
-		return this.tusertroles;
-	}
+    public String getCname() {
+        return this.cname;
+    }
 
-	public void setTusertroles(Set tusertroles) {
-		this.tusertroles = tusertroles;
-	}
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    public Set getTroletauths() {
+        return this.troletauths;
+    }
+
+    public void setTroletauths(Set troletauths) {
+        this.troletauths = troletauths;
+    }
+
+    public Set getTusertroles() {
+        return this.tusertroles;
+    }
+
+    public void setTusertroles(Set tusertroles) {
+        this.tusertroles = tusertroles;
+    }
 
 }

@@ -15,59 +15,61 @@ import javax.persistence.Table;
 @Table(name = "TUSERTROLE", schema = "")
 public class Tusertrole implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Trole trole;
-	private Tuser tuser;
+    private String cid;
 
-	// Constructors
+    private Trole trole;
 
-	/** default constructor */
-	public Tusertrole() {
-	}
+    private Tuser tuser;
 
-	/** minimal constructor */
-	public Tusertrole(String cid) {
-		this.cid = cid;
-	}
+    // Constructors
 
-	/** full constructor */
-	public Tusertrole(String cid, Trole trole, Tuser tuser) {
-		this.cid = cid;
-		this.trole = trole;
-		this.tuser = tuser;
-	}
+    /** default constructor */
+    public Tusertrole() {
+    }
 
-	// Property accessors
-	@Id
-	@Column(name = "CID",  nullable = false, length = 36)
-	public String getCid() {
-		return this.cid;
-	}
+    /** minimal constructor */
+    public Tusertrole(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    /** full constructor */
+    public Tusertrole(String cid, Trole trole, Tuser tuser) {
+        this.cid = cid;
+        this.trole = trole;
+        this.tuser = tuser;
+    }
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "CROLEID")
-	public Trole getTrole() {
-		return this.trole;
-	}
+    // Property accessors
+    @Id
+    @Column(name = "CID", nullable = false, length = 36)
+    public String getCid() {
+        return this.cid;
+    }
 
-	public void setTrole(Trole trole) {
-		this.trole = trole;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "CUSERID")
-	public Tuser getTuser() {
-		return this.tuser;
-	}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CROLEID")
+    public Trole getTrole() {
+        return this.trole;
+    }
 
-	public void setTuser(Tuser tuser) {
-		this.tuser = tuser;
-	}
+    public void setTrole(Trole trole) {
+        this.trole = trole;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CUSERID")
+    public Tuser getTuser() {
+        return this.tuser;
+    }
+
+    public void setTuser(Tuser tuser) {
+        this.tuser = tuser;
+    }
 
 }

@@ -3,6 +3,7 @@ package rml.model.po;
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,114 +21,122 @@ import javax.persistence.Table;
 @Table(name = "TAUTH", schema = "")
 public class Tauth implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Tauth tauth;
-	private String cdesc;
-	private String cname;
-	private BigDecimal cseq;
-	private String curl;
-	private Set<Troletauth> troletauths = new HashSet<Troletauth>(0);
-	private Set<Tauth> tauths = new HashSet<Tauth>(0);
+    private String cid;
 
-	// Constructors
+    private Tauth tauth;
 
-	/** default constructor */
-	public Tauth() {
-	}
+    private String cdesc;
 
-	/** minimal constructor */
-	public Tauth(String cid, String cname) {
-		this.cid = cid;
-		this.cname = cname;
-	}
+    private String cname;
 
-	/** full constructor */
-	public Tauth(String cid, Tauth tauth, String cdesc, String cname, BigDecimal cseq, String curl, Set<Troletauth> troletauths, Set<Tauth> tauths) {
-		this.cid = cid;
-		this.tauth = tauth;
-		this.cdesc = cdesc;
-		this.cname = cname;
-		this.cseq = cseq;
-		this.curl = curl;
-		this.troletauths = troletauths;
-		this.tauths = tauths;
-	}
+    private BigDecimal cseq;
 
-	// Property accessors
-	@Id
-	@Column(name = "CID",  nullable = false, length = 36)
-	public String getCid() {
-		return this.cid;
-	}
+    private String curl;
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    private Set<Troletauth> troletauths = new HashSet<Troletauth>(0);
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "CPID")
-	public Tauth getTauth() {
-		return this.tauth;
-	}
+    private Set<Tauth> tauths = new HashSet<Tauth>(0);
 
-	public void setTauth(Tauth tauth) {
-		this.tauth = tauth;
-	}
+    // Constructors
 
-	@Column(name = "CDESC", length = 200)
-	public String getCdesc() {
-		return this.cdesc;
-	}
+    /** default constructor */
+    public Tauth() {
+    }
 
-	public void setCdesc(String cdesc) {
-		this.cdesc = cdesc;
-	}
+    /** minimal constructor */
+    public Tauth(String cid, String cname) {
+        this.cid = cid;
+        this.cname = cname;
+    }
 
-	@Column(name = "CNAME", nullable = false, length = 100)
-	public String getCname() {
-		return this.cname;
-	}
+    /** full constructor */
+    public Tauth(String cid, Tauth tauth, String cdesc, String cname, BigDecimal cseq, String curl,
+            Set<Troletauth> troletauths, Set<Tauth> tauths) {
+        this.cid = cid;
+        this.tauth = tauth;
+        this.cdesc = cdesc;
+        this.cname = cname;
+        this.cseq = cseq;
+        this.curl = curl;
+        this.troletauths = troletauths;
+        this.tauths = tauths;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    // Property accessors
+    @Id
+    @Column(name = "CID", nullable = false, length = 36)
+    public String getCid() {
+        return this.cid;
+    }
 
-	@Column(name = "CSEQ", precision = 22, scale = 0)
-	public BigDecimal getCseq() {
-		return this.cseq;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCseq(BigDecimal cseq) {
-		this.cseq = cseq;
-	}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CPID")
+    public Tauth getTauth() {
+        return this.tauth;
+    }
 
-	@Column(name = "CURL", length = 200)
-	public String getCurl() {
-		return this.curl;
-	}
+    public void setTauth(Tauth tauth) {
+        this.tauth = tauth;
+    }
 
-	public void setCurl(String curl) {
-		this.curl = curl;
-	}
+    @Column(name = "CDESC", length = 200)
+    public String getCdesc() {
+        return this.cdesc;
+    }
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "tauth")
-	public Set<Troletauth> getTroletauths() {
-		return this.troletauths;
-	}
+    public void setCdesc(String cdesc) {
+        this.cdesc = cdesc;
+    }
 
-	public void setTroletauths(Set<Troletauth> troletauths) {
-		this.troletauths = troletauths;
-	}
+    @Column(name = "CNAME", nullable = false, length = 100)
+    public String getCname() {
+        return this.cname;
+    }
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "tauth")
-	public Set<Tauth> getTauths() {
-		return this.tauths;
-	}
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
-	public void setTauths(Set<Tauth> tauths) {
-		this.tauths = tauths;
-	}
+    @Column(name = "CSEQ", precision = 22, scale = 0)
+    public BigDecimal getCseq() {
+        return this.cseq;
+    }
+
+    public void setCseq(BigDecimal cseq) {
+        this.cseq = cseq;
+    }
+
+    @Column(name = "CURL", length = 200)
+    public String getCurl() {
+        return this.curl;
+    }
+
+    public void setCurl(String curl) {
+        this.curl = curl;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "tauth")
+    public Set<Troletauth> getTroletauths() {
+        return this.troletauths;
+    }
+
+    public void setTroletauths(Set<Troletauth> troletauths) {
+        this.troletauths = troletauths;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "tauth")
+    public Set<Tauth> getTauths() {
+        return this.tauths;
+    }
+
+    public void setTauths(Set<Tauth> tauths) {
+        this.tauths = tauths;
+    }
 
 }

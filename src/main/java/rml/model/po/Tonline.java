@@ -1,6 +1,7 @@
 package rml.model.po;
 
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,64 +16,67 @@ import javax.persistence.TemporalType;
 @Table(name = "TONLINE", schema = "")
 public class Tonline implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Date cdatetime;
-	private String cip;
-	private String cname;
+    private String cid;
 
-	// Constructors
+    private Date cdatetime;
 
-	/** default constructor */
-	public Tonline() {
-	}
+    private String cip;
 
-	/** full constructor */
-	public Tonline(String cid, Date cdatetime, String cip, String cname) {
-		this.cid = cid;
-		this.cdatetime = cdatetime;
-		this.cip = cip;
-		this.cname = cname;
-	}
+    private String cname;
 
-	// Property accessors
-	@Id
-	@Column(name = "CID",  nullable = false, length = 36)
-	public String getCid() {
-		return this.cid;
-	}
+    // Constructors
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    /** default constructor */
+    public Tonline() {
+    }
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "CDATETIME", nullable = false, length = 7)
-	public Date getCdatetime() {
-		return this.cdatetime;
-	}
+    /** full constructor */
+    public Tonline(String cid, Date cdatetime, String cip, String cname) {
+        this.cid = cid;
+        this.cdatetime = cdatetime;
+        this.cip = cip;
+        this.cname = cname;
+    }
 
-	public void setCdatetime(Date cdatetime) {
-		this.cdatetime = cdatetime;
-	}
+    // Property accessors
+    @Id
+    @Column(name = "CID", nullable = false, length = 36)
+    public String getCid() {
+        return this.cid;
+    }
 
-	@Column(name = "CIP", nullable = false, length = 50)
-	public String getCip() {
-		return this.cip;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCip(String cip) {
-		this.cip = cip;
-	}
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "CDATETIME", nullable = false, length = 7)
+    public Date getCdatetime() {
+        return this.cdatetime;
+    }
 
-	@Column(name = "CNAME", nullable = false, length = 100)
-	public String getCname() {
-		return this.cname;
-	}
+    public void setCdatetime(Date cdatetime) {
+        this.cdatetime = cdatetime;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    @Column(name = "CIP", nullable = false, length = 50)
+    public String getCip() {
+        return this.cip;
+    }
+
+    public void setCip(String cip) {
+        this.cip = cip;
+    }
+
+    @Column(name = "CNAME", nullable = false, length = 100)
+    public String getCname() {
+        return this.cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
 }

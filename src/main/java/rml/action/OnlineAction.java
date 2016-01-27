@@ -13,25 +13,25 @@ import com.opensymphony.xwork2.ModelDriven;
 @Action(value = "onlineAction")
 public class OnlineAction extends BaseAction implements ModelDriven<Online> {
 
-	private Online online = new Online();
+    private Online online = new Online();
 
-	public Online getModel() {
-		return online;
-	}
+    public Online getModel() {
+        return online;
+    }
 
-	private OnlineServiceI onlineService;
+    private OnlineServiceI onlineService;
 
-	public OnlineServiceI getOnlineService() {
-		return onlineService;
-	}
+    public OnlineServiceI getOnlineService() {
+        return onlineService;
+    }
 
-	@Autowired
-	public void setOnlineService(OnlineServiceI onlineService) {
-		this.onlineService = onlineService;
-	}
+    @Autowired
+    public void setOnlineService(OnlineServiceI onlineService) {
+        this.onlineService = onlineService;
+    }
 
-	public void doNotNeedSession_onlineDatagrid() {
-		super.writeJson(onlineService.datagrid(online));
-	}
+    public void doNotNeedSession_onlineDatagrid() {
+        super.writeJson(onlineService.datagrid(online));
+    }
 
 }

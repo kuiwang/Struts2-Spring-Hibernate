@@ -2,97 +2,105 @@ package rml.model.vo;
 
 public class Role implements java.io.Serializable {
 
-	private String ids;
-	private String authIds;
-	private String authNames;
-	//pagination
-	private int page;// current page
-	private int rows;// number of records in each page
-	private String sort;// sort field
-	private String order;// sort order (asc,desc)
-	
-	private String cid;
-	private String cdesc;
-	private String cname;
+    private String ids;
 
-	public String getAuthIds() {
-		return authIds;
-	}
+    private String authIds;
 
-	public void setAuthIds(String authIds) {
-		this.authIds = authIds;
-	}
+    private String authNames;
 
-	public String getAuthNames() {
-		return authNames;
-	}
+    //pagination
+    private int page;// current page
 
-	public void setAuthNames(String authNames) {
-		this.authNames = authNames;
-	}
+    private int rows;// number of records in each page
 
-	public int getPage() {
-		return page;
-	}
+    private String sort;// sort field
 
-	public void setPage(int page) {
-		this.page = page;
-	}
+    private String order;// sort order (asc,desc)
 
-	public int getRows() {
-		return rows;
-	}
+    private String cid;
 
-	public void setRows(int rows) {
-		this.rows = rows;
-	}
+    private String cdesc;
 
-	public String getSort() {
-		return sort;
-	}
+    private String cname;
 
-	public void setSort(String sort) {
-		this.sort = sort;
-	}
+    public String getAuthIds() {
+        return authIds;
+    }
 
-	public String getOrder() {
-		return order;
-	}
+    public void setAuthIds(String authIds) {
+        this.authIds = authIds;
+    }
 
-	public void setOrder(String order) {
-		this.order = order;
-	}
+    public String getAuthNames() {
+        return authNames;
+    }
 
-	public String getIds() {
-		return ids;
-	}
+    public void setAuthNames(String authNames) {
+        this.authNames = authNames;
+    }
 
-	public void setIds(String ids) {
-		this.ids = ids;
-	}
+    public int getPage() {
+        return page;
+    }
 
-	public String getCid() {
-		return cid;
-	}
+    public void setPage(int page) {
+        this.page = page;
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    public int getRows() {
+        return rows;
+    }
 
-	public String getCdesc() {
-		return cdesc;
-	}
+    public void setRows(int rows) {
+        this.rows = rows;
+    }
 
-	public void setCdesc(String cdesc) {
-		this.cdesc = cdesc;
-	}
+    public String getSort() {
+        return sort;
+    }
 
-	public String getCname() {
-		return cname;
-	}
+    public void setSort(String sort) {
+        this.sort = sort;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public String getOrder() {
+        return order;
+    }
+
+    public void setOrder(String order) {
+        this.order = order;
+    }
+
+    public String getIds() {
+        return ids;
+    }
+
+    public void setIds(String ids) {
+        this.ids = ids;
+    }
+
+    public String getCid() {
+        return cid;
+    }
+
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
+
+    public String getCdesc() {
+        return cdesc;
+    }
+
+    public void setCdesc(String cdesc) {
+        this.cdesc = cdesc;
+    }
+
+    public String getCname() {
+        return cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
 }

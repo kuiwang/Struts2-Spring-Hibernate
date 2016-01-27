@@ -8,22 +8,22 @@ import rml.model.vo.User;
 
 public interface UserServiceI {
 
-	public User login(User user);
+    public User login(User user);
 
-	public void save(User user);
+    public void save(User user);
 
-	public void update(User user);
+    public void update(User user);
 
-	public void delete(String ids);
+    public void delete(String ids);
 
-	public void roleEdit(User user);
+    public void roleEdit(User user);
 
-	public void editUserInfo(User user);
-	
-	public DataGrid datagrid(User user);
+    public void editUserInfo(User user);
 
-	public List<User> combobox(User user);
-	
-	public List<RoleChart> countRole();
+    public DataGrid datagrid(User user);
+
+    public List<User> combobox(User user);
+
+    public List<RoleChart> countRole();
 
 }

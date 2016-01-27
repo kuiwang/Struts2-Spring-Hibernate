@@ -6,91 +6,99 @@ package rml.model.vo;
  */
 public class SessionInfo implements java.io.Serializable {
 
-	private String userId;// user ID
-	private String loginName;// loginName
-	private String loginPassword;// loginName
-	private String ip;// IP address
-	private String authIds;// auth IDs
-	private String authNames;
-	private String authUrls;
-	private String roleIds;
-	private String roleNames;
+    private String userId;// user ID
 
-	public String getAuthUrls() {
-		return authUrls;
-	}
+    private String loginName;// loginName
 
-	public void setAuthUrls(String authUrls) {
-		this.authUrls = authUrls;
-	}
+    private String loginPassword;// loginName
 
-	public String getAuthNames() {
-		return authNames;
-	}
+    private String ip;// IP address
 
-	public void setAuthNames(String authNames) {
-		this.authNames = authNames;
-	}
+    private String authIds;// auth IDs
 
-	public String getRoleIds() {
-		return roleIds;
-	}
+    private String authNames;
 
-	public void setRoleIds(String roleIds) {
-		this.roleIds = roleIds;
-	}
+    private String authUrls;
 
-	public String getRoleNames() {
-		return roleNames;
-	}
+    private String roleIds;
 
-	public void setRoleNames(String roleNames) {
-		this.roleNames = roleNames;
-	}
+    private String roleNames;
 
-	public String getAuthIds() {
-		return authIds;
-	}
+    public String getAuthUrls() {
+        return authUrls;
+    }
 
-	public void setAuthIds(String authIds) {
-		this.authIds = authIds;
-	}
+    public void setAuthUrls(String authUrls) {
+        this.authUrls = authUrls;
+    }
 
-	public String getUserId() {
-		return userId;
-	}
+    public String getAuthNames() {
+        return authNames;
+    }
 
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
+    public void setAuthNames(String authNames) {
+        this.authNames = authNames;
+    }
 
-	public String getLoginName() {
-		return loginName;
-	}
+    public String getRoleIds() {
+        return roleIds;
+    }
 
-	public void setLoginName(String loginName) {
-		this.loginName = loginName;
-	}
+    public void setRoleIds(String roleIds) {
+        this.roleIds = roleIds;
+    }
 
-	public String getLoginPassword() {
-		return loginPassword;
-	}
+    public String getRoleNames() {
+        return roleNames;
+    }
 
-	public void setLoginPassword(String loginPassword) {
-		this.loginPassword = loginPassword;
-	}
+    public void setRoleNames(String roleNames) {
+        this.roleNames = roleNames;
+    }
 
-	public String getIp() {
-		return ip;
-	}
+    public String getAuthIds() {
+        return authIds;
+    }
 
-	public void setIp(String ip) {
-		this.ip = ip;
-	}
+    public void setAuthIds(String authIds) {
+        this.authIds = authIds;
+    }
 
-	@Override
-	public String toString() {
-		return loginName;
-	}
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getLoginName() {
+        return loginName;
+    }
+
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    public String getLoginPassword() {
+        return loginPassword;
+    }
+
+    public void setLoginPassword(String loginPassword) {
+        this.loginPassword = loginPassword;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    @Override
+    public String toString() {
+        return loginName;
+    }
 
 }

@@ -10,96 +10,102 @@ import java.util.Set;
 
 public class Tmenu implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Tmenu tmenu;
-	private String ciconcls;
-	private String cname;
-	private BigDecimal cseq;
-	private String curl;
-	private Set tmenus = new HashSet(0);
+    private String cid;
 
-	// Constructors
+    private Tmenu tmenu;
 
-	/** default constructor */
-	public Tmenu() {
-	}
+    private String ciconcls;
 
-	/** minimal constructor */
-	public Tmenu(String cid, String cname) {
-		this.cid = cid;
-		this.cname = cname;
-	}
+    private String cname;
 
-	/** full constructor */
-	public Tmenu(String cid, Tmenu tmenu, String ciconcls, String cname,
-			BigDecimal cseq, String curl, Set tmenus) {
-		this.cid = cid;
-		this.tmenu = tmenu;
-		this.ciconcls = ciconcls;
-		this.cname = cname;
-		this.cseq = cseq;
-		this.curl = curl;
-		this.tmenus = tmenus;
-	}
+    private BigDecimal cseq;
 
-	// Property accessors
+    private String curl;
 
-	public String getCid() {
-		return this.cid;
-	}
+    private Set tmenus = new HashSet(0);
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    // Constructors
 
-	public Tmenu getTmenu() {
-		return this.tmenu;
-	}
+    /** default constructor */
+    public Tmenu() {
+    }
 
-	public void setTmenu(Tmenu tmenu) {
-		this.tmenu = tmenu;
-	}
+    /** minimal constructor */
+    public Tmenu(String cid, String cname) {
+        this.cid = cid;
+        this.cname = cname;
+    }
 
-	public String getCiconcls() {
-		return this.ciconcls;
-	}
+    /** full constructor */
+    public Tmenu(String cid, Tmenu tmenu, String ciconcls, String cname, BigDecimal cseq,
+            String curl, Set tmenus) {
+        this.cid = cid;
+        this.tmenu = tmenu;
+        this.ciconcls = ciconcls;
+        this.cname = cname;
+        this.cseq = cseq;
+        this.curl = curl;
+        this.tmenus = tmenus;
+    }
 
-	public void setCiconcls(String ciconcls) {
-		this.ciconcls = ciconcls;
-	}
+    // Property accessors
 
-	public String getCname() {
-		return this.cname;
-	}
+    public String getCid() {
+        return this.cid;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public BigDecimal getCseq() {
-		return this.cseq;
-	}
+    public Tmenu getTmenu() {
+        return this.tmenu;
+    }
 
-	public void setCseq(BigDecimal cseq) {
-		this.cseq = cseq;
-	}
+    public void setTmenu(Tmenu tmenu) {
+        this.tmenu = tmenu;
+    }
 
-	public String getCurl() {
-		return this.curl;
-	}
+    public String getCiconcls() {
+        return this.ciconcls;
+    }
 
-	public void setCurl(String curl) {
-		this.curl = curl;
-	}
+    public void setCiconcls(String ciconcls) {
+        this.ciconcls = ciconcls;
+    }
 
-	public Set getTmenus() {
-		return this.tmenus;
-	}
+    public String getCname() {
+        return this.cname;
+    }
 
-	public void setTmenus(Set tmenus) {
-		this.tmenus = tmenus;
-	}
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    public BigDecimal getCseq() {
+        return this.cseq;
+    }
+
+    public void setCseq(BigDecimal cseq) {
+        this.cseq = cseq;
+    }
+
+    public String getCurl() {
+        return this.curl;
+    }
+
+    public void setCurl(String curl) {
+        this.curl = curl;
+    }
+
+    public Set getTmenus() {
+        return this.tmenus;
+    }
+
+    public void setTmenus(Set tmenus) {
+        this.tmenus = tmenus;
+    }
 
 }

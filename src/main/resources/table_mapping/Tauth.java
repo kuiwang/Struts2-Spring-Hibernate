@@ -10,106 +10,113 @@ import java.util.Set;
 
 public class Tauth implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Tauth tauth;
-	private String cdesc;
-	private String cname;
-	private BigDecimal cseq;
-	private String curl;
-	private Set tauths = new HashSet(0);
-	private Set troletauths = new HashSet(0);
+    private String cid;
 
-	// Constructors
+    private Tauth tauth;
 
-	/** default constructor */
-	public Tauth() {
-	}
+    private String cdesc;
 
-	/** minimal constructor */
-	public Tauth(String cid, String cname) {
-		this.cid = cid;
-		this.cname = cname;
-	}
+    private String cname;
 
-	/** full constructor */
-	public Tauth(String cid, Tauth tauth, String cdesc, String cname,
-			BigDecimal cseq, String curl, Set tauths, Set troletauths) {
-		this.cid = cid;
-		this.tauth = tauth;
-		this.cdesc = cdesc;
-		this.cname = cname;
-		this.cseq = cseq;
-		this.curl = curl;
-		this.tauths = tauths;
-		this.troletauths = troletauths;
-	}
+    private BigDecimal cseq;
 
-	// Property accessors
+    private String curl;
 
-	public String getCid() {
-		return this.cid;
-	}
+    private Set tauths = new HashSet(0);
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    private Set troletauths = new HashSet(0);
 
-	public Tauth getTauth() {
-		return this.tauth;
-	}
+    // Constructors
 
-	public void setTauth(Tauth tauth) {
-		this.tauth = tauth;
-	}
+    /** default constructor */
+    public Tauth() {
+    }
 
-	public String getCdesc() {
-		return this.cdesc;
-	}
+    /** minimal constructor */
+    public Tauth(String cid, String cname) {
+        this.cid = cid;
+        this.cname = cname;
+    }
 
-	public void setCdesc(String cdesc) {
-		this.cdesc = cdesc;
-	}
+    /** full constructor */
+    public Tauth(String cid, Tauth tauth, String cdesc, String cname, BigDecimal cseq, String curl,
+            Set tauths, Set troletauths) {
+        this.cid = cid;
+        this.tauth = tauth;
+        this.cdesc = cdesc;
+        this.cname = cname;
+        this.cseq = cseq;
+        this.curl = curl;
+        this.tauths = tauths;
+        this.troletauths = troletauths;
+    }
 
-	public String getCname() {
-		return this.cname;
-	}
+    // Property accessors
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public String getCid() {
+        return this.cid;
+    }
 
-	public BigDecimal getCseq() {
-		return this.cseq;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCseq(BigDecimal cseq) {
-		this.cseq = cseq;
-	}
+    public Tauth getTauth() {
+        return this.tauth;
+    }
 
-	public String getCurl() {
-		return this.curl;
-	}
+    public void setTauth(Tauth tauth) {
+        this.tauth = tauth;
+    }
 
-	public void setCurl(String curl) {
-		this.curl = curl;
-	}
+    public String getCdesc() {
+        return this.cdesc;
+    }
 
-	public Set getTauths() {
-		return this.tauths;
-	}
+    public void setCdesc(String cdesc) {
+        this.cdesc = cdesc;
+    }
 
-	public void setTauths(Set tauths) {
-		this.tauths = tauths;
-	}
+    public String getCname() {
+        return this.cname;
+    }
 
-	public Set getTroletauths() {
-		return this.troletauths;
-	}
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
-	public void setTroletauths(Set troletauths) {
-		this.troletauths = troletauths;
-	}
+    public BigDecimal getCseq() {
+        return this.cseq;
+    }
+
+    public void setCseq(BigDecimal cseq) {
+        this.cseq = cseq;
+    }
+
+    public String getCurl() {
+        return this.curl;
+    }
+
+    public void setCurl(String curl) {
+        this.curl = curl;
+    }
+
+    public Set getTauths() {
+        return this.tauths;
+    }
+
+    public void setTauths(Set tauths) {
+        this.tauths = tauths;
+    }
+
+    public Set getTroletauths() {
+        return this.troletauths;
+    }
+
+    public void setTroletauths(Set troletauths) {
+        this.troletauths = troletauths;
+    }
 
 }

@@ -13,14 +13,14 @@ import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
  */
 public class EncodingInterceptor extends AbstractInterceptor {
 
-	private static final Logger logger = Logger.getLogger(EncodingInterceptor.class);
-    
-	@Override
-	public String intercept(ActionInvocation actionInvocation) throws Exception {
-		ActionContext actionContext = actionInvocation.getInvocationContext();
-		ServletActionContext.getResponse().setCharacterEncoding("utf-8");
-		ServletActionContext.getRequest().setCharacterEncoding("utf-8");
-		return actionInvocation.invoke();
-	}
+    private static final Logger logger = Logger.getLogger(EncodingInterceptor.class);
+
+    @Override
+    public String intercept(ActionInvocation actionInvocation) throws Exception {
+        ActionContext actionContext = actionInvocation.getInvocationContext();
+        ServletActionContext.getResponse().setCharacterEncoding("utf-8");
+        ServletActionContext.getRequest().setCharacterEncoding("utf-8");
+        return actionInvocation.invoke();
+    }
 
 }

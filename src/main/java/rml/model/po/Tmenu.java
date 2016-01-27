@@ -3,6 +3,7 @@ package rml.model.po;
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,103 +21,110 @@ import javax.persistence.Table;
 @Table(name = "TMENU", schema = "")
 public class Tmenu implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Tmenu tmenu;
-	private String ciconcls;
-	private String cname;
-	private BigDecimal cseq;
-	private String curl;
-	private Set<Tmenu> tmenus = new HashSet<Tmenu>(0);
+    private String cid;
 
-	// Constructors
+    private Tmenu tmenu;
 
-	/** default constructor */
-	public Tmenu() {
-	}
+    private String ciconcls;
 
-	/** minimal constructor */
-	public Tmenu(String cid, String cname) {
-		this.cid = cid;
-		this.cname = cname;
-	}
+    private String cname;
 
-	/** full constructor */
-	public Tmenu(String cid, Tmenu tmenu, String ciconcls, String cname, BigDecimal cseq, String curl, Set<Tmenu> tmenus) {
-		this.cid = cid;
-		this.tmenu = tmenu;
-		this.ciconcls = ciconcls;
-		this.cname = cname;
-		this.cseq = cseq;
-		this.curl = curl;
-		this.tmenus = tmenus;
-	}
+    private BigDecimal cseq;
 
-	// Property accessors
-	@Id
-	@Column(name = "CID",  nullable = false, length = 36)
-	public String getCid() {
-		return this.cid;
-	}
+    private String curl;
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    private Set<Tmenu> tmenus = new HashSet<Tmenu>(0);
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "CPID")
-	public Tmenu getTmenu() {
-		return this.tmenu;
-	}
+    // Constructors
 
-	public void setTmenu(Tmenu tmenu) {
-		this.tmenu = tmenu;
-	}
+    /** default constructor */
+    public Tmenu() {
+    }
 
-	@Column(name = "CICONCLS", length = 100)
-	public String getCiconcls() {
-		return this.ciconcls;
-	}
+    /** minimal constructor */
+    public Tmenu(String cid, String cname) {
+        this.cid = cid;
+        this.cname = cname;
+    }
 
-	public void setCiconcls(String ciconcls) {
-		this.ciconcls = ciconcls;
-	}
+    /** full constructor */
+    public Tmenu(String cid, Tmenu tmenu, String ciconcls, String cname, BigDecimal cseq,
+            String curl, Set<Tmenu> tmenus) {
+        this.cid = cid;
+        this.tmenu = tmenu;
+        this.ciconcls = ciconcls;
+        this.cname = cname;
+        this.cseq = cseq;
+        this.curl = curl;
+        this.tmenus = tmenus;
+    }
 
-	@Column(name = "CNAME", nullable = false, length = 100)
-	public String getCname() {
-		return this.cname;
-	}
+    // Property accessors
+    @Id
+    @Column(name = "CID", nullable = false, length = 36)
+    public String getCid() {
+        return this.cid;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	@Column(name = "CSEQ", precision = 22, scale = 0)
-	public BigDecimal getCseq() {
-		return this.cseq;
-	}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CPID")
+    public Tmenu getTmenu() {
+        return this.tmenu;
+    }
 
-	public void setCseq(BigDecimal cseq) {
-		this.cseq = cseq;
-	}
+    public void setTmenu(Tmenu tmenu) {
+        this.tmenu = tmenu;
+    }
 
-	@Column(name = "CURL", length = 200)
-	public String getCurl() {
-		return this.curl;
-	}
+    @Column(name = "CICONCLS", length = 100)
+    public String getCiconcls() {
+        return this.ciconcls;
+    }
 
-	public void setCurl(String curl) {
-		this.curl = curl;
-	}
+    public void setCiconcls(String ciconcls) {
+        this.ciconcls = ciconcls;
+    }
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "tmenu")
-	public Set<Tmenu> getTmenus() {
-		return this.tmenus;
-	}
+    @Column(name = "CNAME", nullable = false, length = 100)
+    public String getCname() {
+        return this.cname;
+    }
 
-	public void setTmenus(Set<Tmenu> tmenus) {
-		this.tmenus = tmenus;
-	}
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    @Column(name = "CSEQ", precision = 22, scale = 0)
+    public BigDecimal getCseq() {
+        return this.cseq;
+    }
+
+    public void setCseq(BigDecimal cseq) {
+        this.cseq = cseq;
+    }
+
+    @Column(name = "CURL", length = 200)
+    public String getCurl() {
+        return this.curl;
+    }
+
+    public void setCurl(String curl) {
+        this.curl = curl;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "tmenu")
+    public Set<Tmenu> getTmenus() {
+        return this.tmenus;
+    }
+
+    public void setTmenus(Set<Tmenu> tmenus) {
+        this.tmenus = tmenus;
+    }
 
 }

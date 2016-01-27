@@ -6,32 +6,34 @@ package rml.model.vo;
  */
 public class Json implements java.io.Serializable {
 
-	private boolean success = false;// is successful
-	private String msg = "";// message
-	private Object obj = null;// other info
+    private boolean success = false;// is successful
 
-	public String getMsg() {
-		return msg;
-	}
+    private String msg = "";// message
 
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
+    private Object obj = null;// other info
 
-	public Object getObj() {
-		return obj;
-	}
+    public String getMsg() {
+        return msg;
+    }
 
-	public void setObj(Object obj) {
-		this.obj = obj;
-	}
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
 
-	public boolean isSuccess() {
-		return success;
-	}
+    public Object getObj() {
+        return obj;
+    }
 
-	public void setSuccess(boolean success) {
-		this.success = success;
-	}
+    public void setObj(Object obj) {
+        this.obj = obj;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
 
 }

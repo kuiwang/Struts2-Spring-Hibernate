@@ -4,188 +4,202 @@ import java.util.Date;
 
 public class User implements java.io.Serializable {
 
-	private String ids;
-	private String roleIds;
-	private String roleNames;
-	private String authIds;
-	private String authNames;
-	private String authUrls;
-	//pagination
-	private int page;// current page
-	private int rows;// number of records in each page
-	private String sort;// sort field
-	private String order;// sort order (asc,desc)
-	//user search
-	//private Date ccreatedatetimeStart;
-	//private Date cmodifydatetimeStart;
-	//private Date ccreatedatetimeEnd;
-	//private Date cmodifydatetimeEnd;
-	private String q;
-	
-	private String cid;
-	private Date ccreatedatetime;
-	private Date cmodifydatetime;
-	private String cname;
-	private String cpwd;
+    private String ids;
 
-	public String getQ() {
-		return q;
-	}
+    private String roleIds;
 
-	public void setQ(String q) {
-		this.q = q;
-	}
+    private String roleNames;
 
-	public String getAuthUrls() {
-		return authUrls;
-	}
+    private String authIds;
 
-	public void setAuthUrls(String authUrls) {
-		this.authUrls = authUrls;
-	}
+    private String authNames;
 
-	public String getAuthNames() {
-		return authNames;
-	}
+    private String authUrls;
 
-	public void setAuthNames(String authNames) {
-		this.authNames = authNames;
-	}
+    //pagination
+    private int page;// current page
 
-	public String getAuthIds() {
-		return authIds;
-	}
+    private int rows;// number of records in each page
 
-	public void setAuthIds(String authIds) {
-		this.authIds = authIds;
-	}
+    private String sort;// sort field
 
-/*	public Date getCcreatedatetimeStart() {
-		return ccreatedatetimeStart;
-	}
+    private String order;// sort order (asc,desc)
 
-	public void setCcreatedatetimeStart(Date ccreatedatetimeStart) {
-		this.ccreatedatetimeStart = ccreatedatetimeStart;
-	}
+    //user search
+    //private Date ccreatedatetimeStart;
+    //private Date cmodifydatetimeStart;
+    //private Date ccreatedatetimeEnd;
+    //private Date cmodifydatetimeEnd;
+    private String q;
 
-	public Date getCmodifydatetimeStart() {
-		return cmodifydatetimeStart;
-	}
+    private String cid;
 
-	public void setCmodifydatetimeStart(Date cmodifydatetimeStart) {
-		this.cmodifydatetimeStart = cmodifydatetimeStart;
-	}
+    private Date ccreatedatetime;
 
-	public Date getCcreatedatetimeEnd() {
-		return ccreatedatetimeEnd;
-	}
+    private Date cmodifydatetime;
 
-	public void setCcreatedatetimeEnd(Date ccreatedatetimeEnd) {
-		this.ccreatedatetimeEnd = ccreatedatetimeEnd;
-	}
+    private String cname;
 
-	public Date getCmodifydatetimeEnd() {
-		return cmodifydatetimeEnd;
-	}
+    private String cpwd;
 
-	public void setCmodifydatetimeEnd(Date cmodifydatetimeEnd) {
-		this.cmodifydatetimeEnd = cmodifydatetimeEnd;
-	}
-*/
-	public String getIds() {
-		return ids;
-	}
+    public String getQ() {
+        return q;
+    }
 
-	public void setIds(String ids) {
-		this.ids = ids;
-	}
+    public void setQ(String q) {
+        this.q = q;
+    }
 
-	public int getPage() {
-		return page;
-	}
+    public String getAuthUrls() {
+        return authUrls;
+    }
 
-	public void setPage(int page) {
-		this.page = page;
-	}
+    public void setAuthUrls(String authUrls) {
+        this.authUrls = authUrls;
+    }
 
-	public int getRows() {
-		return rows;
-	}
+    public String getAuthNames() {
+        return authNames;
+    }
 
-	public void setRows(int rows) {
-		this.rows = rows;
-	}
+    public void setAuthNames(String authNames) {
+        this.authNames = authNames;
+    }
 
-	public String getSort() {
-		return sort;
-	}
+    public String getAuthIds() {
+        return authIds;
+    }
 
-	public void setSort(String sort) {
-		this.sort = sort;
-	}
+    public void setAuthIds(String authIds) {
+        this.authIds = authIds;
+    }
 
-	public String getOrder() {
-		return order;
-	}
+    /*	public Date getCcreatedatetimeStart() {
+    		return ccreatedatetimeStart;
+    	}
 
-	public void setOrder(String order) {
-		this.order = order;
-	}
+    	public void setCcreatedatetimeStart(Date ccreatedatetimeStart) {
+    		this.ccreatedatetimeStart = ccreatedatetimeStart;
+    	}
 
-	public String getRoleIds() {
-		return roleIds;
-	}
+    	public Date getCmodifydatetimeStart() {
+    		return cmodifydatetimeStart;
+    	}
 
-	public void setRoleIds(String roleIds) {
-		this.roleIds = roleIds;
-	}
+    	public void setCmodifydatetimeStart(Date cmodifydatetimeStart) {
+    		this.cmodifydatetimeStart = cmodifydatetimeStart;
+    	}
 
-	public String getRoleNames() {
-		return roleNames;
-	}
+    	public Date getCcreatedatetimeEnd() {
+    		return ccreatedatetimeEnd;
+    	}
 
-	public void setRoleNames(String roleNames) {
-		this.roleNames = roleNames;
-	}
+    	public void setCcreatedatetimeEnd(Date ccreatedatetimeEnd) {
+    		this.ccreatedatetimeEnd = ccreatedatetimeEnd;
+    	}
 
-	public String getCid() {
-		return cid;
-	}
+    	public Date getCmodifydatetimeEnd() {
+    		return cmodifydatetimeEnd;
+    	}
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    	public void setCmodifydatetimeEnd(Date cmodifydatetimeEnd) {
+    		this.cmodifydatetimeEnd = cmodifydatetimeEnd;
+    	}
+    */
+    public String getIds() {
+        return ids;
+    }
 
-	public Date getCcreatedatetime() {
-		return ccreatedatetime;
-	}
+    public void setIds(String ids) {
+        this.ids = ids;
+    }
 
-	public void setCcreatedatetime(Date ccreatedatetime) {
-		this.ccreatedatetime = ccreatedatetime;
-	}
+    public int getPage() {
+        return page;
+    }
 
-	public Date getCmodifydatetime() {
-		return cmodifydatetime;
-	}
+    public void setPage(int page) {
+        this.page = page;
+    }
 
-	public void setCmodifydatetime(Date cmodifydatetime) {
-		this.cmodifydatetime = cmodifydatetime;
-	}
+    public int getRows() {
+        return rows;
+    }
 
-	public String getCname() {
-		return cname;
-	}
+    public void setRows(int rows) {
+        this.rows = rows;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public String getSort() {
+        return sort;
+    }
 
-	public String getCpwd() {
-		return cpwd;
-	}
+    public void setSort(String sort) {
+        this.sort = sort;
+    }
 
-	public void setCpwd(String cpwd) {
-		this.cpwd = cpwd;
-	}
+    public String getOrder() {
+        return order;
+    }
+
+    public void setOrder(String order) {
+        this.order = order;
+    }
+
+    public String getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(String roleIds) {
+        this.roleIds = roleIds;
+    }
+
+    public String getRoleNames() {
+        return roleNames;
+    }
+
+    public void setRoleNames(String roleNames) {
+        this.roleNames = roleNames;
+    }
+
+    public String getCid() {
+        return cid;
+    }
+
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
+
+    public Date getCcreatedatetime() {
+        return ccreatedatetime;
+    }
+
+    public void setCcreatedatetime(Date ccreatedatetime) {
+        this.ccreatedatetime = ccreatedatetime;
+    }
+
+    public Date getCmodifydatetime() {
+        return cmodifydatetime;
+    }
+
+    public void setCmodifydatetime(Date cmodifydatetime) {
+        this.cmodifydatetime = cmodifydatetime;
+    }
+
+    public String getCname() {
+        return cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    public String getCpwd() {
+        return cpwd;
+    }
+
+    public void setCpwd(String cpwd) {
+        this.cpwd = cpwd;
+    }
 
 }

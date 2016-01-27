@@ -15,59 +15,61 @@ import javax.persistence.Table;
 @Table(name = "TROLETAUTH", schema = "")
 public class Troletauth implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String cid;
-	private Tauth tauth;
-	private Trole trole;
+    private String cid;
 
-	// Constructors
+    private Tauth tauth;
 
-	/** default constructor */
-	public Troletauth() {
-	}
+    private Trole trole;
 
-	/** minimal constructor */
-	public Troletauth(String cid) {
-		this.cid = cid;
-	}
+    // Constructors
 
-	/** full constructor */
-	public Troletauth(String cid, Tauth tauth, Trole trole) {
-		this.cid = cid;
-		this.tauth = tauth;
-		this.trole = trole;
-	}
+    /** default constructor */
+    public Troletauth() {
+    }
 
-	// Property accessors
-	@Id
-	@Column(name = "CID",  nullable = false, length = 36)
-	public String getCid() {
-		return this.cid;
-	}
+    /** minimal constructor */
+    public Troletauth(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    /** full constructor */
+    public Troletauth(String cid, Tauth tauth, Trole trole) {
+        this.cid = cid;
+        this.tauth = tauth;
+        this.trole = trole;
+    }
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "CAUTHID")
-	public Tauth getTauth() {
-		return this.tauth;
-	}
+    // Property accessors
+    @Id
+    @Column(name = "CID", nullable = false, length = 36)
+    public String getCid() {
+        return this.cid;
+    }
 
-	public void setTauth(Tauth tauth) {
-		this.tauth = tauth;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "CROLEID")
-	public Trole getTrole() {
-		return this.trole;
-	}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CAUTHID")
+    public Tauth getTauth() {
+        return this.tauth;
+    }
 
-	public void setTrole(Trole trole) {
-		this.trole = trole;
-	}
+    public void setTauth(Tauth tauth) {
+        this.tauth = tauth;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CROLEID")
+    public Trole getTrole() {
+        return this.trole;
+    }
+
+    public void setTrole(Trole trole) {
+        this.trole = trole;
+    }
 
 }

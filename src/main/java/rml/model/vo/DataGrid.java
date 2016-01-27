@@ -8,32 +8,34 @@ import java.util.List;
  */
 public class DataGrid implements java.io.Serializable {
 
-	private Long total;// total number of records
-	private List rows;// each records
-	private List footer;
+    private Long total;// total number of records
 
-	public Long getTotal() {
-		return total;
-	}
+    private List rows;// each records
 
-	public void setTotal(Long total) {
-		this.total = total;
-	}
+    private List footer;
 
-	public List getRows() {
-		return rows;
-	}
+    public Long getTotal() {
+        return total;
+    }
 
-	public void setRows(List rows) {
-		this.rows = rows;
-	}
+    public void setTotal(Long total) {
+        this.total = total;
+    }
 
-	public List getFooter() {
-		return footer;
-	}
+    public List getRows() {
+        return rows;
+    }
 
-	public void setFooter(List footer) {
-		this.footer = footer;
-	}
+    public void setRows(List rows) {
+        this.rows = rows;
+    }
+
+    public List getFooter() {
+        return footer;
+    }
+
+    public void setFooter(List footer) {
+        this.footer = footer;
+    }
 
 }

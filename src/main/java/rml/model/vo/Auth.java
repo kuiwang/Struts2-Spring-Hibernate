@@ -6,96 +6,104 @@ import rml.model.po.Tauth;
 
 public class Auth implements java.io.Serializable {
 
-	private String id;
-	private String pid;
-	private String pname;
-	private String state = "open";// (open,closed)
+    private String id;
 
-	private String cid;
-	private Tauth tauth;
-	private String cdesc;
-	private String cname;
-	private BigDecimal cseq;
-	private String curl;
-	
-	public String getState() {
-		return state;
-	}
+    private String pid;
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    private String pname;
 
-	public String getId() {
-		return id;
-	}
+    private String state = "open";// (open,closed)
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    private String cid;
 
-	public String getPid() {
-		return pid;
-	}
+    private Tauth tauth;
 
-	public void setPid(String pid) {
-		this.pid = pid;
-	}
+    private String cdesc;
 
-	public String getPname() {
-		return pname;
-	}
+    private String cname;
 
-	public void setPname(String pname) {
-		this.pname = pname;
-	}
+    private BigDecimal cseq;
 
-	public String getCid() {
-		return cid;
-	}
+    private String curl;
 
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
+    public String getState() {
+        return state;
+    }
 
-	public Tauth getTauth() {
-		return tauth;
-	}
+    public void setState(String state) {
+        this.state = state;
+    }
 
-	public void setTauth(Tauth tauth) {
-		this.tauth = tauth;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public String getCdesc() {
-		return cdesc;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setCdesc(String cdesc) {
-		this.cdesc = cdesc;
-	}
+    public String getPid() {
+        return pid;
+    }
 
-	public String getCname() {
-		return cname;
-	}
+    public void setPid(String pid) {
+        this.pid = pid;
+    }
 
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
+    public String getPname() {
+        return pname;
+    }
 
-	public BigDecimal getCseq() {
-		return cseq;
-	}
+    public void setPname(String pname) {
+        this.pname = pname;
+    }
 
-	public void setCseq(BigDecimal cseq) {
-		this.cseq = cseq;
-	}
+    public String getCid() {
+        return cid;
+    }
 
-	public String getCurl() {
-		return curl;
-	}
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
 
-	public void setCurl(String curl) {
-		this.curl = curl;
-	}
+    public Tauth getTauth() {
+        return tauth;
+    }
+
+    public void setTauth(Tauth tauth) {
+        this.tauth = tauth;
+    }
+
+    public String getCdesc() {
+        return cdesc;
+    }
+
+    public void setCdesc(String cdesc) {
+        this.cdesc = cdesc;
+    }
+
+    public String getCname() {
+        return cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    public BigDecimal getCseq() {
+        return cseq;
+    }
+
+    public void setCseq(BigDecimal cseq) {
+        this.cseq = cseq;
+    }
+
+    public String getCurl() {
+        return curl;
+    }
+
+    public void setCurl(String curl) {
+        this.curl = curl;
+    }
 
 }
